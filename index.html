@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: poppins;
+    box-sizing: border-box;
+   
+}
+.logo img{
+    width: 60px;
+    border-radius: 40%;
+   margin-left: 30px;
+   margin-top:15px ;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color:#3AAFA9;
+    position: fixed;
+    transition: 0.3s ease;
+}
+
+.list{
+    display: flex;
+    width: 70%;
+}
+
+
+.navbar .text{
+    display: flex;
+    
+    
+}
+.navbar .text li{
+    list-style: none;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+     
+}
+.navbar .text li:hover{
+    color: cyan;
+   font-weight: 650;
+}
+.writing{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: 72px;
+    border-radius: 7px;
+    font-size: 16px;
+    color: darkblack;
+    height: 28px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+.btn:hover{
+    color: cyan;
+    font-weight: 550;
+    border: 2px solid cyan;
+}
+.writing input{
+    width: 200px;
+    height:28px ;
+    border-radius: 7px ;
+    border: none;
+    border: 2px solid blue;
+    font-size: 17px;
+    padding-left: 20px;
+}
+.hamburger{
+
+   position: absolute;
+   top: 10px;
+   right: 20px;
+   display: none;
+}
+.line{
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 3px;
+}
+
+@media only screen and (max-width: 930px) {
+    .navbar{
+       background-color: #3AAFA9;
+    }   
+    .writing input{
+       width: 150px;
+    }
+    .logo img{
+       margin-left: 10px;
+       
+    }
+   }
+   
+   @media only screen and (max-width: 800px){
+       .navbar{
+           background-color: #3AAFA9;
+           flex-direction: column;
+           height: 339px;
+       }
+       .navbar .text {
+           flex-direction: column;
+           transition: 0.2s ease-in;
+           
+       }
+       .navbar .text li {
+           color: white;
+          
+       }
+       .writing{
+           width: 100%;
+           transition: 0.2s ease;
+       }
+       .textlist{
+           width: 100%;
+       }
+       .textlist{
+           width: 100%;
+           text-align: center;
+       }
+       .list{
+            width: 100%;
+            text-align: center;
+       }
+   
+       .hamburger{
+           display: block;
+       }
+       .navbar .text li{
+           padding: 10px;
+       }
+       .v-class-resp{
+           opacity: 0%;
+           
+       }
+       .height-class-resp{
+           height: 45px;
+       }
+      
+        
+   }
+
+
+  </style>
+</head>
+<body>      
+<div class="navbar height-class-resp">
+    <div class="list">
+         <div class="textlist">
+             <ul class="text v-class-resp">
+                <div class="logo"><img src="logocom.jpg" alt="logo"></div>
+                <li><a href="#"></a>Home</li>
+                <li><a href="#"></a>Sign in</li>
+                <li><a href="#"></a>Contact</li>
+                <li><a href="#"></a>About us</li>
+                <li><a href="#"></a>Blogs</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="writing v-class-resp">
+    <input type="text" placeholder="
+    search" >
+    <button class="btn">Search</button></div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</div>
+ <!-- midsection -->
+<div class="midSection">
+   
+</div>
+<script>
+    const hamburger =document.querySelector(".hamburger");
+const writing = document.querySelector(".writing");
+const text = document.querySelector(".text");
+const navbar = document.querySelector(".navbar");
+
+
+hamburger.addEventListener("click", ()=>{
+    navbar.classList.toggle("height-class-resp");
+    writing.classList.toggle("v-class-resp");
+    text.classList.toggle("v-class-resp");
+})
+</script>
+</body>
+</html>
